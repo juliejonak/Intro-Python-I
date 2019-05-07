@@ -55,6 +55,8 @@ best for learning new languages.
 
    You can exit the virtual environment by typing `exit`.
 
+Done!
+
 ## Goals
 
 * Learn the basic syntax and structure of Python

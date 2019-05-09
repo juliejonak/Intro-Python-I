@@ -15,7 +15,18 @@ y = "7"
 
 # YOUR CODE HERE
 
+print(x + int(y))
+
+# int() converts to a plain integer
+# long() converts to a long integer 
+# float() converts to a floating point number 
+# complex() converts to a complex number with real part x and imaginary part zero
+
+# See more at: https://www.tutorialspoint.com/python/python_numbers.htm
+
 
 # Write a print statement that combines x + y into the string value 57
 
 # YOUR CODE HERE
+
+print(str(x) + y)

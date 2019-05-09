@@ -75,7 +75,7 @@ obtained via exposure to other programming languages towards learning Python.
 
 The suggested order for going through each of the directories is: 
 
-* `hello` -- Hello world
+#####* `hello` -- Hello world
 * `bignum` -- Print some big numbers
 * `datatypes` -- Experiment with type conversion
 * `modules` -- Learn to import from modules
@@ -84,7 +84,7 @@ The suggested order for going through each of the directories is:
 * `tuples` -- Immutable lists typically for heterogenous data
 * `slices` -- Accessing parts of lists
 * `comprehensions` -- List comprehensions
-* `dictionaries` -- Dictionaries
+#####* `dictionaries` -- Dictionaries
 * `functions` -- Functions
 * `args` -- Arguments and Keyword Arguments
 * `scopes` -- Global, Local, and Non-Local scope

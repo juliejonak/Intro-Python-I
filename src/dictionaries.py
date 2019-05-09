@@ -62,3 +62,46 @@ for point in waypoints:
 for point in waypoints:
     for key in point:
         print(key + ': ' + str(point[key]))
+
+for i in waypoints:
+    sentence = " %s is located at %d latitude and %d logitude." % (i['name'], i['lat'], i['lon'])
+    print(sentence)
+
+# Could we find a dictionary with a specific key value...if we don't know the index?
+# Have it return the index of the found dictionary
+# Hint: Start with a for loop
+
+for i in range(0, len(waypoints)):
+    if waypoints[i]['name'] == 'not a real place':
+        print(i)
+
+
+# Another option is to use a simpler loop on the dictionaries within the list, then return the index using a list method
+
+for item in waypoints:
+    if item['name'] == 'not a real place':
+        print(waypoints.index(item))
+
+# We could make this more generalized and reusable by turning it into a function
+
+def find_key(value):
+    output = 'Not found'
+    for item in waypoints:
+        if item['name'] == value:
+            output = "Found at " + str(waypoints.index(item))
+    print(output)
+
+find_key("a third place")
+find_key("Not found")
+
+# And taking it a step further, giving it additional parameters for the list and key name
+
+def find_another_key(a_list, key, value):
+    output = 'Not found'
+    for item in a_list:
+        if item[key] == value:
+            output = "Found at " + str(waypoints.index(item))
+    print(output)
+
+find_another_key(waypoints, 'name', "a third place")
+find_another_key(waypoints, 'name', "Not found")

@@ -53,3 +53,12 @@ for dictionary in waypoints:
 
 for i in range(0, len(waypoints)):
     print(waypoints[i])
+
+for point in waypoints:
+    print('Latitude: ' + str(point['lat']))
+    print('Longitude: ' + str(point['lon']))
+    print('Name: ' + point['name'])
+
+for point in waypoints:
+    for key in point:
+        print(key + ': ' + str(point[key]))

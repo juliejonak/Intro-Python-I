@@ -12,7 +12,13 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 with open('foo.txt', 'r') as f:
     print(f.read())
 
+# To be more efficient than reading line by line, we can loop over the file:
+with open('foo.txt', 'r') as f:
+    for line in f:
+        print(line)
+
 # How does 'with' work in Python? https://effbot.org/zone/python-with-statement.htm
+# If you opt to not use 'with', make sure to use f.close() at the end
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
@@ -20,3 +26,12 @@ with open('foo.txt', 'r') as f:
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+
+with open('bar.txt', 'w') as f:
+    f.write('Welcome to the bar. ')
+    f.write('We still need a catchy name. ')
+    f.write('If you think of one, let us know.')
+
+with open('bar.txt', 'r') as f:
+    for line in f:
+        print(line)

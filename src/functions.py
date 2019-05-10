@@ -10,3 +10,10 @@ num = int(num)
 
 # YOUR CODE HERE
 
+def printEven(num):
+    if(num%2==0):
+        print('Even!')
+    else: 
+        print('Odd')
+
+printEven(num)

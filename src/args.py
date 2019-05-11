@@ -57,10 +57,12 @@ print(f3(8))     # Should print 9
 # Google "python keyword arguments".
 
 # YOUR CODE HERE
-def f4(**kwargs):
+def f4(*argv, **kwargs):
+    if argv is not None:
+        for arg in argv:
+            for item in arg:
+                print('key: {}, value: {}'.format(item, arg[item]))
     if kwargs is not None:
-        if type(kwargs) is dict:
-            print('yes')
         for key, value in kwargs.items():
             print('key: {}, value: {}'.format(key, value))
 
@@ -87,8 +89,5 @@ d = {
 }
 
 # What thing do you have to add to make this work?
+f4(d)
 
-# What does this ^ mean? What do we have to add to our argument or to our function? Very unclear directions.
-
-# print(type(d) is dict)
-# f4(d)

@@ -5,6 +5,8 @@
 # the sum. This is what you'd consider to be a regular, normal function.
 
 # YOUR CODE HERE
+def f1(x,y):
+    return int(x)+int(y)
 
 print(f1(1, 2))
 
@@ -12,6 +14,11 @@ print(f1(1, 2))
 # sum. Google for "python arbitrary arguments" and look for "*args"
 
 # YOUR CODE HERE
+def f2(x, *argv):
+    sum = x
+    for arg in argv:
+        sum = sum + arg
+    return sum
 
 print(f2(1))                    # Should print 1
 print(f2(1, 3))                 # Should print 4
@@ -28,6 +35,14 @@ print(f2(a))    # Should print 22
 # arguments. Google "python default arguments" for a hint.
 
 # YOUR CODE HERE
+def f3(*nums):
+    sum = 0
+    for num in nums:
+        if len(nums) == 1:
+            sum = num+1
+        else:
+            sum = sum + num
+    return sum
 
 print(f3(1, 2))  # Should print 3
 print(f3(8))     # Should print 9
@@ -42,6 +57,16 @@ print(f3(8))     # Should print 9
 # Google "python keyword arguments".
 
 # YOUR CODE HERE
+def f4(**kwargs):
+    if kwargs is not None:
+        for key, value in kwargs.items():
+            print('key: {}, value: {}'.format(key, value))
+
+# Why does f-string not work?
+# def f4(**kwargs):
+#     if kwargs is not None:
+#         for key, value in kwargs.items():
+#             print(f'key: {key}, value: {value}')
 
 # Should print
 # key: a, value: 12
@@ -60,4 +85,7 @@ d = {
 }
 
 # What thing do you have to add to make this work?
-f4(d)
+
+# What does this ^ mean? What do we have to add to our argument or to our function? Very unclear directions.
+print(d)
+# f4(d)

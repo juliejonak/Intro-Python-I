@@ -59,6 +59,8 @@ print(f3(8))     # Should print 9
 # YOUR CODE HERE
 def f4(**kwargs):
     if kwargs is not None:
+        if type(kwargs) is dict:
+            print('yes')
         for key, value in kwargs.items():
             print('key: {}, value: {}'.format(key, value))
 
@@ -87,5 +89,6 @@ d = {
 # What thing do you have to add to make this work?
 
 # What does this ^ mean? What do we have to add to our argument or to our function? Very unclear directions.
-print(d)
+
+# print(type(d) is dict)
 # f4(d)

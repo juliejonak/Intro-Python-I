@@ -57,20 +57,20 @@ print(f3(8))     # Should print 9
 # Google "python keyword arguments".
 
 # YOUR CODE HERE
-def f4(*argv, **kwargs):
-    if argv is not None:
-        for arg in argv:
-            for item in arg:
-                print('key: {}, value: {}'.format(item, arg[item]))
-    if kwargs is not None:
-        for key, value in kwargs.items():
-            print('key: {}, value: {}'.format(key, value))
-
-# Why does f-string not work?
-# def f4(**kwargs):
+# def f4(*argv, **kwargs):
+#     if argv is not None:
+#         for arg in argv:
+#             for item in arg:
+#                 print('key: {}, value: {}'.format(item, arg[item]))
 #     if kwargs is not None:
 #         for key, value in kwargs.items():
-#             print(f'key: {key}, value: {value}')
+#             print('key: {}, value: {}'.format(key, value))
+
+# Why does f-string not work?
+def f4(**kwargs):
+    if kwargs is not None:
+        for key, value in kwargs.items():
+            print(f'key: {key}, value: {value}')
 
 # Should print
 # key: a, value: 12
@@ -89,5 +89,7 @@ d = {
 }
 
 # What thing do you have to add to make this work?
-f4(d)
 
+# * and ** have another use when placed in front of variables: https://treyhunner.com/2018/10/asterisks-in-python-what-they-are-and-how-to-use-them/
+# * can unpack a list or tuple. ** can unpack dictionaries
+f4(**d)
